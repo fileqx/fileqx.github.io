@@ -1,0 +1,253 @@
+/* Background pattern from Toptal Subtle Patterns */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: url(images/pink%20dust.png) repeat;
+    margin: 0;
+    width:100%;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#header
+{
+    margin: 0 auto;
+    max-width:400px;
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+}
+
+#header h1
+{
+    font-size: 48px;
+    text-shadow: 4px 2px 2px rgb(0, 0, 0);
+    color: white
+}
+
+#header h2
+{
+    font-size:12px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#nav
+{
+    max-width:400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+#nav ul
+{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 5px;
+}
+
+#nav li
+{
+    padding: 0 20px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+}
+
+#nav li:last-child
+{
+    border-right: none;
+}
+
+#nav a
+{
+    color: black;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+#content
+{
+    max-width:1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius:10px;
+    padding: 20px;
+    text-align:center;
+}
+
+#checkform
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#checkform h2
+{
+    font-size:18px;
+    padding: 8px;
+}
+
+#checkform h3
+{
+    display: none;
+}
+
+#checkform ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+#checkform li
+{
+    padding: 10px;
+}
+
+#checkform select {
+    
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    margin-top:5px;
+}
+
+.time
+{
+    font-size:18px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.tomorrow
+{
+    display:none;
+}
+
+.time h2
+{
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.time div
+{
+    margin: 0 2px;
+}
+
+#actual
+{
+    font-size:24px;
+}
+span
+{
+    margin-left:5px;
+}
+
+#info
+{
+    background-color: #fff;
+    border-radius:10px;
+    padding: 10px;
+    max-width: 450px;
+    margin: 30px auto;
+}
+
+#lesson-lists
+{
+    margin-top: 20px;
+    font-size:24px;
+}
+
+#lesson-lists ul
+{
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+#footer
+{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+#container
+{
+    display: flex;
+    justify-content: center;
+}
+
+#container img
+{
+    width:200px;
+    margin: 0 auto;
+    margin-top: 35px;
+    
+    display:block;
+}
+
+@media screen and (max-width: 1024px)
+{
+    #content
+    {
+        max-width:800px;
+    }
+    
+    #checkform, #checkform ul
+    {
+        flex-direction: column;
+    }
+    
+    #checkform select
+    {
+        max-width:320px;
+    }
+    #checkform h3
+    {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        margin-top:5px;
+        max-width:250px;
+        font-size: 16px;
+    }
+    #checkform ul
+    {
+        display: none;
+    }
+    #container 
+    {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    #content
+    {
+        max-width:400px;
+    }
+    
+    #checkform select
+    {
+        max-width:250px;
+    }
+    
+}

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<!--
+TODO:
+- Nauczyciele po najechaniu na lekcje,
+- Ustawienia grup,
+- Przyciski,
+- Zastępstwa.
+-->
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="fileq">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans+Condensed:300&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/favico.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="30">
+        <title>Plan Lekcji 1G Sieniu</title>
+    </head>
+    <body>
+        <header id="header">
+            <h1>PLAN LEKCJI</h1>
+            <h2>1G Sienkiewicz</h2>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" onclick="setDate(11, 09, 30);">DZISIAJ</a></li>
+                <li><a href="#">JUTRO</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1r6wlsbIxKxCQwsvIINGXVEkhs6x3M_PydAI_BreHbeQ/edit#gid=0">CAŁY PLAN</a></li>
+            </ul>
+        </nav>
+        <div id="container">
+        <section id="content">
+            <article id="today">
+                <div class="time"><h2>Dziś jest:</h2> <div id="day">x</div> <div id="date">x</div> <div id="whatTime">x</div></div>
+                <div class="time tomorrow"><h2>Wybrany dzień:</h2> <div id="day">x</div> <div id="date">x</div> <div id="whatTime">x</div></div>
+                <div id="checkform">
+                   <h2>Wybór grup:</h2>
+                   <h3 onclick="hideOnOff();">Angielski: grupa 1 | Niemiecki: grupa 1 &#8801;</h3>
+                   <ul id="check">
+                   <li>Język angielski:</li>
+                    <form>
+                          <select id="ang" name="ang" onchange="checkGroupName(1)" disabled>
+                            <option value="zaaw">grupa 1 - prof. Joanna Sejdak</option>
+                            <option value="podst">grupa 2 - prof. Sylwia Ciesielska</option>
+                          </select>
+                    </form>
+                    <li>Język niemiecki/francuski:</li>
+                    <form>
+                        <select id="niem" name="niem" onchange="checkGroupName(2)" disabled>
+                            <option value="deu1">(niemiecki) grupa 1 - prof. Beata Borkowska</option>
+                            <option value="deu2">(niemiecki) grupa 2 - prof. Magdalena Górska</option>
+                            <option value="deu3">(niemiecki) grupa 3 - prof. Agnieszka Ulatowska</option>
+                            <option value="fra1">(francuski) podstawa</option>
+                            <option value="fra2">(francuski) rozszerzenie</option>
+                        </select>
+                    </form>
+                    </ul>
+                </div>
+                <div id="info">
+                <h2 id="actual" class="hideOnTomorrow">AKTUALNIE TRWA: <span id="lesson"></span> | SALA: <span id="room"></span></h2>
+                    <div id="hide">
+                        <h2 id="break" class="hideOnTomorrow">DO DZWONKA POZOSTAŁO: <span id="to"></span></h2>
+                        <h2 id="next">KOLEJNE LEKCJE DZISIAJ:</h2>
+                        <div id="lesson-lists"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <article class="ads">
+                <a href="https://www.youtube.com/watch?v=GC5n5UwLX8A"><img src="images/starypijany.jpg" alt="pawel jumper"></a>
+            </article>
+        </div>
+        <footer id="footer">code/design_Filip Stanisławski</footer>
+    </body>
+</html>
