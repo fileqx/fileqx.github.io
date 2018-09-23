@@ -31,11 +31,11 @@ TODO:
                var today = day(numDay);
                if(today !== "Niedziela" && today !== "Sobota")
                    {
+                       document.getElementById("to").innerHTML = timeToAlert(today);
                        document.getElementById("day").innerHTML = today.dzien + " /";
                        document.getElementById("lesson").innerHTML = checkLesson(today)[0];
                        document.getElementById("room").innerHTML = checkLesson(today)[2];
                        document.getElementById("lesson-lists").innerHTML = nextLessons(today) + "</ul>";
-                       document.getElementById("to").innerHTML = timeToAlert(today);
                    }
                else
                {

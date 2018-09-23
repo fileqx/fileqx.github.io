@@ -1,6 +1,6 @@
  var currentDate = new Date();
-              // currentDate.setHours(7, 39);
-              // currentDate.setDate(24);
+               currentDate.setHours(7, 25);
+               currentDate.setDate(24);
             console.log(currentDate);
            function day(numD)
            {
@@ -161,21 +161,26 @@
            
            function timeToAlert(xddd)
            {
+               console.log(checkLesson(xddd)[0]);
                var time = currentDate.getHours()*60 + currentDate.getMinutes();
                if(checkLesson(xddd)[0] == "Przerwa")
                    {
                        var toNextLessons = lessonHours[checkLesson(xddd)[1] + xddd.poczatek + 1];
                        return toNextLessons - time + "min";
                    }
-               else if(checkLesson(xddd)[0] !== "Brak lekcji" && checkLesson(xddd)[0] !== "Przed lekcjami")
+               else if(checkLesson(xddd)[0] == "Brak lekcji")
                {
-                   console.log(checkLesson(xddd)[0]);
-                   var toNextBreak = endHours[checkLesson(xddd)[1] + xddd.poczatek];
-                   return toNextBreak - time + " min";
+                   return "-";
                }
+               else if(checkLesson(xddd)[0] == "Przed lekcjami")
+                   {
+                       var toNextBreak = endHours[checkLesson(xddd)[1] + xddd.poczatek];
+                       return toNextBreak - time - 45 + " min";
+                   }
                else
                    {
-                       return "-";
+                       var toNextBreak = endHours[checkLesson(xddd)[1] + xddd.poczatek];
+                       return toNextBreak - time + " min";
                    }
            }
            
