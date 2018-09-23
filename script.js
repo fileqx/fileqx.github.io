@@ -1,6 +1,6 @@
  var currentDate = new Date();
-             // currentDate.setHours(8, 30);
-            //  currentDate.setDate(14);
+              // currentDate.setHours(7, 39);
+              // currentDate.setDate(24);
             console.log(currentDate);
            function day(numD)
            {
@@ -95,9 +95,13 @@
                
                var lessonHour;
                
-               if(time < lessonHours[abc.poczatek]||time >= endHours[abc.lekcje.length + abc.poczatek- 1])
+               if(time < lessonHours[abc.poczatek])
                    {
-                       return ["Brak lekcji", 0, 0]
+                       return ["Przed lekcjami", 0, "-"];
+                   }
+               else if(time >= endHours[abc.lekcje.length + abc.poczatek- 1])
+                   {
+                       return ["Brak lekcji", 0, "-"];
                    }
                else
                   {
@@ -163,7 +167,7 @@
                        var toNextLessons = lessonHours[checkLesson(xddd)[1] + xddd.poczatek + 1];
                        return toNextLessons - time + "min";
                    }
-               else if(checkLesson(xddd)[0] !== "Brak lekcji")
+               else if(checkLesson(xddd)[0] !== "Brak lekcji" && checkLesson(xddd)[0] !== "Przed lekcjami")
                {
                    console.log(checkLesson(xddd)[0]);
                    var toNextBreak = endHours[checkLesson(xddd)[1] + xddd.poczatek];
