@@ -124,6 +124,17 @@ body
     margin-top:5px;
 }
 
+#week
+{
+    margin-top: 20px;
+}
+
+#week ul
+{
+    list-style-position: inside;
+    padding: 10px;
+}
+
 .time
 {
     font-size:18px;
