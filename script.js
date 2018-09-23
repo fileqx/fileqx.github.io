@@ -192,7 +192,9 @@
                 var valuee = "";
                 for(i = 1; i < 6; i++)
                     {
-                        valuee += "<h2>" + day(i).dzien + "</h2> <ul>";
+                        var startHour = "";
+                        lessonHours[day(i).poczatek] == 460 ? startHour = "7:40" : startHour = "8:30";
+                        valuee += "<h2>" + day(i).dzien + " | " + startHour + "</h2><ul>";
                         var lessonsTodays = day(i).lekcje;
                         for(x = 0; x < lessonsTodays.length; x++)
                             {
@@ -200,5 +202,5 @@
                             }
                         valuee += "</ul>";
                     }
-                return valuee + "";
+                return valuee;
             }
