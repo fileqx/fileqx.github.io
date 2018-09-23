@@ -1,7 +1,7 @@
  var currentDate = new Date();
-              currentDate.setHours(8, 30);
-              currentDate.setDate(14);
-           console.log(currentDate);
+             // currentDate.setHours(8, 30);
+            //  currentDate.setDate(14);
+            console.log(currentDate);
            function day(numD)
            {
                switch (numD)
