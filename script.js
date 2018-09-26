@@ -1,6 +1,6 @@
  var currentDate = new Date();
-               currentDate.setHours(7, 25);
-               currentDate.setDate(24);
+               // currentDate.setHours(7, 25);
+               // currentDate.setDate(24);
             console.log(currentDate);
            function day(numD)
            {
