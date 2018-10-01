@@ -202,8 +202,11 @@
                 for(i = 1; i < 6; i++)
                     {
                         var startHour = "";
+                        var endHour = "";
                         lessonHours[day(i).poczatek] == 460 ? startHour = "7:40" : startHour = "8:30";
-                        valuee += "<h2>" + day(i).dzien + " | " + startHour + "</h2><ul>";
+                        endHours[day(i).lekcje.length - 1] == 840 ? endHour = "14:00" : endHour = "14:55";
+                        console.log(lessonHours[day(i).lekcje.length - 1])
+                        valuee += "<h2>" + day(i).dzien + " | " + startHour + " - " + endHour + "</h2><ul>";
                         var lessonsTodays = day(i).lekcje;
                         for(x = 0; x < lessonsTodays.length; x++)
                             {
