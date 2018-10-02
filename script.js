@@ -85,9 +85,9 @@
                    return custom;
                }
                
-               var lessonHours = [customTime(7, 40), customTime(8, 30), customTime(9, 25), customTime(10, 20), customTime(11, 25), customTime(12, 20), customTime(13, 15), customTime(14, 10), customTime (15, 0)];
+               var lessonHours = [customTime(7, 40), customTime(8, 30), customTime(9, 25), customTime(10, 20), customTime(11, 25), customTime(12, 20), customTime(13, 15), customTime(14, 5), customTime (15, 0)];
                
-               var endHours = [customTime(08, 25), customTime(09, 15), customTime(10, 10), customTime(11, 05), customTime(12, 10), customTime(13,05), customTime(14, 00), customTime(14, 55)];
+               var endHours = [customTime(08, 25), customTime(09, 15), customTime(10, 10), customTime(11, 05), customTime(12, 10), customTime(13,05), customTime(14, 00), customTime(14, 50)];
            
            function checkLesson(abc)
            {
@@ -203,14 +203,18 @@
                     {
                         var startHour = "";
                         var endHour = "";
+                        var s;
+                        var lNum;
+                        day(i).poczatek == 0 ? s = day(i).lekcje.length - 1 : s = day(i).lekcje.length;
+                        var xxx = endHours[s];
                         lessonHours[day(i).poczatek] == 460 ? startHour = "7:40" : startHour = "8:30";
-                        endHours[day(i).lekcje.length - 1] == 840 ? endHour = "14:00" : endHour = "14:55";
-                        console.log(lessonHours[day(i).lekcje.length - 1])
+                        xxx == 840 ? endHour = "14:00" : endHour = "14:55";
                         valuee += "<h2>" + day(i).dzien + " | " + startHour + " - " + endHour + "</h2><ul>";
                         var lessonsTodays = day(i).lekcje;
                         for(x = 0; x < lessonsTodays.length; x++)
                             {
-                                valuee += "<li>" + day(i).lekcje[x] + " | " + day(i).sala[x] + "</li>";
+                                var d = x + day(i).poczatek;
+                                valuee += "<li><b>" + d + ". </b>" + day(i).lekcje[x] + " | " + day(i).sala[x] + "</li>";
                             }
                         valuee += "</ul>";
                     }

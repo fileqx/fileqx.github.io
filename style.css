@@ -133,6 +133,7 @@ body
 {
     list-style-position: inside;
     padding: 10px;
+    list-style-type: none;
 }
 
 .time
