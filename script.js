@@ -1,6 +1,6 @@
  var currentDate = new Date();
-               // currentDate.setHours(7, 25);
-               // currentDate.setDate(24);
+            // currentDate.setHours(14, 30);
+            // currentDate.setDate(10);
             console.log(currentDate);
            function day(numD)
            {
@@ -141,8 +141,6 @@
                var lessonsToday = abc.lekcje;
                var roomsToday = abc.sala;
                var lessonsToRemove = checkLesson(abc)[1];
-               lessonsToday.splice(0, lessonsToRemove + 1);
-               roomsToday.splice(0, lessonsToRemove + 1);
                if(lessonsToday.length == 0 || huj == "Brak lekcji") 
                {
                    return "Brak";
@@ -150,10 +148,24 @@
                else
                { 
                    var value = "<ul>";
-                   for(i=0; i < lessonsToday.length; i++)
-                   {
-                       value += "<li>" + lessonsToday[i] + " | " + roomsToday[i] + "</li>";
-                   }
+                   if(huj == "Przed lekcjami")
+                       {
+                           lessonsToday.splice(0, lessonsToRemove);
+                           roomsToday.splice(0, lessonsToRemove);
+                           for(i=0; i < lessonsToday.length; i++)
+                           {
+                               value += "<li>" + lessonsToday[i] + " | " + roomsToday[i] + "</li>";
+                           }
+                       }
+                   else
+                       {
+                           lessonsToday.splice(0, lessonsToRemove + 1);
+                           roomsToday.splice(0, lessonsToRemove + 1);
+                           for(i=0; i < lessonsToday.length; i++)
+                           {
+                               value += "<li>" + lessonsToday[i] + " | " + roomsToday[i] + "</li>";
+                           }
+                       }
 
                    return value;
                }
@@ -184,18 +196,6 @@
                    }
            }
            
-           function hideOnOff()
-           {
-               var hiddenElement = document.getElementById("check");
-               if(hiddenElement.style.display === "none")
-                   {
-                       hiddenElement.style.display = "block";
-                   }
-               else
-                   {
-                       hiddenElement.style.display = "none";
-                   }
-           }
            function allLessons()
             {
                 var valuee = "";
@@ -220,3 +220,14 @@
                     }
                 return valuee;
             }
+        function schoolTimeToday(daya)
+        {
+            var startHour;
+            var adad;
+            console.log(daya);
+            day(daya).poczatek == 0 ? adad = day(daya).lekcje.length - 1 : adad = day(daya).lekcje.length;
+            var xxx = endHours[adad];
+            lessonHours[day(daya).poczatek] == 460 ? startHour = "7:40" : startHour = "8:30";
+            xxx == 840 ? endHour = "14:00" : endHour = "14:55";
+            return startHour + " - " + endHour;
+        }

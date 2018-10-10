@@ -16,6 +16,8 @@ TODO:
         <link rel="icon" type="image/png" href="images/favico.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="30">
+        <meta property="og:locale" content="pl_PL" />
+        <meta property="og:descripton" content="Plan lekcji klasy 1G IV LO w Częstochowie">
         <title>Plan Lekcji | Strona główna</title>
         <script type="text/javascript" src="script.js"></script>
         <script type="text/javascript">
@@ -36,12 +38,14 @@ TODO:
                        document.getElementById("lesson").innerHTML = checkLesson(today)[0];
                        document.getElementById("room").innerHTML = checkLesson(today)[2];
                        document.getElementById("lesson-lists").innerHTML = nextLessons(today) + "</ul>";
+                       document.getElementById("school-time").innerHTML = schoolTimeToday(numDay);
                    }
                else
                {
                    document.getElementById("day").innerHTML = today + " /";
                    document.getElementById("actual").innerHTML = "Dzień wolny od szkoły";
                    document.getElementById("hide").innerHTML = " ";
+                   document.getElementById("school-time").innerHTML = " ";
                }
                
             }, false);   
@@ -86,6 +90,7 @@ TODO:
                     </ul>
                 </div>
                 <div id="info">
+                <h2>Godziny lekcji: <span id="school-time"></span></h2>
                 <h2 id="actual">AKTUALNIE TRWA: <span id="lesson"></span> | SALA: <span id="room"></span></h2>
                     <div id="hide">
                         <h2 id="break" class="hideOnTomorrow">DO DZWONKA POZOSTAŁO: <span id="to"></span></h2>
@@ -95,9 +100,6 @@ TODO:
                 </div>
             </article>
         </section>
-        <article class="ads">
-                <a href="https://www.youtube.com/watch?v=GC5n5UwLX8A"><img src="images/starypijany.jpg" alt="pawel jumper"></a>
-            </article>
         </div>
         <footer id="footer">code/design_Filip Stanisławski</footer>
     </body>
