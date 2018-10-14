@@ -1,6 +1,6 @@
  var currentDate = new Date();
-            // currentDate.setHours(14, 30);
-            // currentDate.setDate(10);
+             // currentDate.setHours(14, 30);
+             // currentDate.setDate(12);
             console.log(currentDate);
            function day(numD)
            {
@@ -208,7 +208,7 @@
                         day(i).poczatek == 0 ? s = day(i).lekcje.length - 1 : s = day(i).lekcje.length;
                         var xxx = endHours[s];
                         lessonHours[day(i).poczatek] == 460 ? startHour = "7:40" : startHour = "8:30";
-                        xxx == 840 ? endHour = "14:00" : endHour = "14:55";
+                        xxx == 840 ? endHour = "14:00" : endHour = "14:50";
                         valuee += "<h2>" + day(i).dzien + " | " + startHour + " - " + endHour + "</h2><ul>";
                         var lessonsTodays = day(i).lekcje;
                         for(x = 0; x < lessonsTodays.length; x++)
@@ -228,6 +228,6 @@
             day(daya).poczatek == 0 ? adad = day(daya).lekcje.length - 1 : adad = day(daya).lekcje.length;
             var xxx = endHours[adad];
             lessonHours[day(daya).poczatek] == 460 ? startHour = "7:40" : startHour = "8:30";
-            xxx == 840 ? endHour = "14:00" : endHour = "14:55";
+            xxx == 840 ? endHour = "14:00" : endHour = "14:50";
             return startHour + " - " + endHour;
         }
