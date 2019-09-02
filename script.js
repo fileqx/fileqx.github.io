@@ -31,12 +31,13 @@
                this.sala = sala;
            }
            
-           var monday = new plan(1, "Poniedziałek", ["J. Francuski (roz)", "Religia", "Matematyka", "J. Polski", "J. polski", "J. angielski"], ["31", "41?", "61", "17", "?", "31/49"]);
-           var tuesday = new plan(0, "Wtorek", ["WOS","Godzina wychowawcza", "J. angielski / Informatyka", "Informatyka / J. ang", "Matematyka", "Historia", "W-F","Jezyk Niemiecki / J. Francuski (podst.)"], ["71", "31", "45/31", "45/30", "61", "71", "-", "57/42/10//34"]);
-           var wednesday = new plan(0, "Środa", ["W-F", "EDB", "Historia", "Chemia", "WOK", "Matematyka", "Matematyka"], ["-", "11", "54A?", "54", "70", "61", "61"]);
-           var thursday = new plan(1, "Czwartek", ["Religia", "Biologia", "J. angielski", "W-F", "PP"], ["41", "71", "31/57", "-", "68"]);
-           var friday = new plan(0, "Piątek", ["J. Niemiecki", "PP", "Fizyka", "Matematyka", "Geografia", "J. polski", "J. polski", "J. Francuski"], ["57/42/10", "41", "13", "61", "41", "54", "54", "34/37"]);
+           var monday = new plan(0, "Poniedziałek", ["inf/fiz", "inf/ang", "ang/inf", "fiz/inf", "his", "matematyka","matematyka"] ["55", "61", "17", "31", "-", "-", "-"]);
+           var tuesday = new plan(1, "Wtorek", ["polski", "polski", "religia", "Matematyka", "wf", "fizyka","Jezyk Niemiecki/francuski"], ["31", "31", "45", "61", "71", "-"]);
+           var wednesday = new plan(4, "Środa", ["ekonomia", "wychowawcza", "ang/inf", "inf/ang", "inf/-"], ["-", "11", "54A", "54", "70", "61"]);
+           var thursday = new plan(0, "Czwartek", ["niemiecki/francuski", "polski", "matma", "his", "fizyka", "wf", "religia", "informatyka"], ["41", "71", "31", "-", "68", "71", "-", "-"]);
+           var friday = new plan(1, "Piątek", ["fizyka", "inf/ang", "ang/inf", "Matematyka", "Matematyka", "J. polski", "wf", ], ["57", "41", "13", "61", "41", "54", "54"]);
            
+
            function checkGroupName(value) {
                if(value == 1)
                    {
