@@ -31,11 +31,11 @@
                this.sala = sala;
            }
            
-           var monday = new plan(0, "Poniedziałek", ["inf/fiz", "inf/ang", "ang/inf", "fiz/inf", "his", "matematyka","matematyka"] ["55", "61", "17", "31", "-", "-", "-"]);
+           var monday = new plan(0, "Poniedziałek", ["inf/fiz", "inf/ang", "ang/inf", "fiz/inf", "his", "matematyka","matematyka"], ["55", "61", "17", "31", "-", "-", "-"]);
            var tuesday = new plan(1, "Wtorek", ["polski", "polski", "religia", "Matematyka", "wf", "fizyka","Jezyk Niemiecki/francuski"], ["31", "31", "45", "61", "71", "-"]);
            var wednesday = new plan(4, "Środa", ["ekonomia", "wychowawcza", "ang/inf", "inf/ang", "inf/-"], ["-", "11", "54A", "54", "70", "61"]);
            var thursday = new plan(0, "Czwartek", ["niemiecki/francuski", "polski", "matma", "his", "fizyka", "wf", "religia", "informatyka"], ["41", "71", "31", "-", "68", "71", "-", "-"]);
-           var friday = new plan(1, "Piątek", ["fizyka", "inf/ang", "ang/inf", "Matematyka", "Matematyka", "J. polski", "wf", ], ["57", "41", "13", "61", "41", "54", "54"]);
+           var friday = new plan(1, "Piątek", ["fizyka", "inf/ang", "ang/inf", "Matematyka", "Matematyka", "J. polski", "wf"], ["57", "41", "13", "61", "41", "54", "54"]);
            
 
            function checkGroupName(value) {
@@ -88,7 +88,7 @@
                
                var lessonHours = [customTime(7, 40), customTime(8, 30), customTime(9, 25), customTime(10, 20), customTime(11, 25), customTime(12, 20), customTime(13, 15), customTime(14, 5), customTime (15, 0)];
                
-               var endHours = [customTime(08, 25), customTime(09, 15), customTime(10, 10), customTime(11, 05), customTime(12, 10), customTime(13,05), customTime(14, 00), customTime(14, 50)];
+               var endHours = [customTime(08, 25), customTime(09, 15), customTime(10, 10), customTime(11, 05), customTime(12, 10), customTime(13,05), customTime(14, 00), customTime(14, 50), customTime(15, 50)];
            
            function checkLesson(abc)
            {
